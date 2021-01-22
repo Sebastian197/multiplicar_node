@@ -25,7 +25,6 @@ const crearArchivo = (base, limite = 10) => {
         };
 
         let data = '';
-        //const data = new Uint8Array(Buffer.from('Hello Node.js'));
         for (let i = 1; i <= limite; i++) {
             data += `${base} * ${i} = ${base * i}\n`;
         };
@@ -33,7 +32,6 @@ const crearArchivo = (base, limite = 10) => {
         fs.writeFile(`tablas/tabla-${base}-al-${limite}.txt`, data, (err) => {
             if (err) reject(err);
             else resolve(`tabla-${base}-al-${limite}.txt`);
-            //console.log(`El archivo tabla-${base}.txt ha sido creado!`);
         });
     });
 };
